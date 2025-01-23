@@ -48,7 +48,7 @@ export default function Competitions() {
         {/* Horizontal Scrolling Section */}
         <div className="relative overflow-hidden">
           <div className="scroll-container flex space-x-6">
-            {[...competitions, ...competitions].map((competition, index) => (
+            {competitions.map((competition, index) => (
               <div 
                 key={index}
                 className="bg-gray-800 rounded-xl overflow-hidden shadow-lg 
@@ -61,9 +61,9 @@ export default function Competitions() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4">
-                    {index % competitions.length === 0 ? (
+                    {index % 3 === 0 ? (
                       <Trophy className="w-8 h-8 text-yellow-400" />
-                    ) : index % competitions.length === 1 ? (
+                    ) : index % 3 === 1 ? (
                       <Award className="w-8 h-8 text-blue-400" />
                     ) : (
                       <Star className="w-8 h-8 text-emerald-400" />
@@ -84,13 +84,29 @@ export default function Competitions() {
       {/* CSS for scrolling animation */}
       <style>{`
         .scroll-container {
-          animation: scroll 20s linear infinite;
           display: flex;
         }
 
-        /* Pause animation on hover */
-        .scroll-container:hover {
-          animation-play-state: paused;
+        /* Infinite scroll for desktop view */
+        @media (min-width: 768px) {
+          .scroll-container {
+            animation: scroll 20s linear infinite;
+          }
+
+          /* Pause animation on hover */
+          .scroll-container:hover {
+            animation-play-state: paused;
+          }
+        }
+
+        /* Scrollable cards for mobile view */
+        @media (max-width: 768px) {
+          .scroll-container {
+            overflow-x: auto;
+            animation: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
         }
 
         @keyframes scroll {

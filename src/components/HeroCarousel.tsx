@@ -43,7 +43,7 @@ export default function CustomCarousel() {
   };
 
   return (
-    <div className="relative w-[600px] h-auto max-w-2xl mx-auto">
+    <div className="relative w-full h-auto max-w-2xl mx-auto sm:w-[600px]">
       {/* Carousel Images */}
       <div className="overflow-hidden rounded-lg relative">
         <div
@@ -65,32 +65,50 @@ export default function CustomCarousel() {
 
       {/* Fixed Text Overlay */}
       {currentIndex > 0 && (
-        <div className="absolute inset-0 flex flex-col justify-between items-center text-white p-4">
+        <div className="absolute inset-0 flex flex-col justify-between items-center text-white p-2 sm:p-4">
           {/* Heading Animation */}
-          <h2 className="text-2xl font-bold text-center bg-black bg-opacity-50 px-4 py-2 rounded animate-slideDown">
+          <h2 className="text-lg sm:text-2xl font-bold text-center bg-black bg-opacity-50 px-2 sm:px-4 py-1 sm:py-2 rounded animate-slideDown">
             Our Achievements
           </h2>
 
           {/* Achievement Info Animation */}
-          <p className="text-lg font-medium text-center bg-black bg-opacity-50 px-4 py-2 rounded animate-slideUp">
+          <p className="text-sm sm:text-lg font-medium text-center bg-black bg-opacity-50 px-2 sm:px-4 py-1 sm:py-2 rounded animate-slideUp">
             {achievements[currentIndex]}
           </p>
         </div>
       )}
 
       {/* Navigation Arrows */}
-      <button
-        onClick={goToPrev}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 focus:outline-none"
-      >
-        &#8592;
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 focus:outline-none"
-      >
-        &#8594;
-      </button>
+      {/* Navigation Arrows */}
+<button
+  onClick={goToPrev}
+  className="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+</button>
+<button
+  onClick={goToNext}
+  className="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-gradient-to-l from-gray-700 to-gray-900 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  </svg>
+</button>
+
 
       {/* Animations */}
       <style>{`
@@ -125,3 +143,4 @@ export default function CustomCarousel() {
     </div>
   );
 }
+
