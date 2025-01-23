@@ -20,13 +20,13 @@ const teamMembers = [
   },
   {
     name: 'Vamsi Sangeppu',
-    role: 'CFO',
+    role: 'CMO',
     image: '/vamsi.jpg',
 
   },
   {
     name: 'Hema',
-    role: 'CMO',
+    role: 'CFO',
     image: '/hema.jpg',
 
   },
