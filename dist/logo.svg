@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green Circle -->
+  <circle cx="250" cy="250" r="240" stroke="#00B140" stroke-width="20"/>
+  
+  <!-- Letter F -->
+  <rect x="150" y="150" width="200" height="40" fill="#004B87"/>
+  <rect x="150" y="150" width="40" height="200" fill="#004B87"/>
+  <rect x="150" y="250" width="160" height="40" fill="#004B87"/>
+</svg>
