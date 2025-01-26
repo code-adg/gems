@@ -23,7 +23,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-emerald-400" />
                 <a href="mailto:info@greenfusion.com" className="hover:text-emerald-400 transition-colors">
-                  info@gfiotsolutionsfusion.com
+                  info@gfiotsolutions.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
