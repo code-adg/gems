@@ -5,14 +5,12 @@ const testimonials = [
   {
     name: 'Radhakrishna Industries',
     quote: 'Green Fusion helped us reduce our energy costs by 25% within the first quarter.',
-    author: 'Rajesh Kumar',
-    position: 'Plant Manager'
+    author: 'Harsha (MD)',
   },
   {
     name: 'Coca Cola Manufacturing Unit',
-    quote: 'The predictive maintenance features have helped us prevent several potential breakdowns.',
-    author: 'Priya Sharma',
-    position: 'Operations Director'
+    quote: 'Its a good technology which can help many large/medium scale industries. Looking forward to it.',
+    author: 'Ravindra (Manager of Orbital)',
   }
 ];
 
@@ -29,7 +27,7 @@ export default function Testimonials() {
               <div>
                 <p className="font-semibold text-white">{testimonial.name}</p>
                 <p className="text-sm text-gray-400">
-                  {testimonial.author} - {testimonial.position}
+                  {testimonial.author}
                 </p>
               </div>
             </div>
