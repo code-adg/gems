@@ -29,13 +29,19 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-emerald-400" />
                 <a href="tel:+919876543210" className="hover:text-emerald-400 transition-colors">
-                  +91 9951012333
+                  +91 6301644960
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-emerald-400" />
                 <a href="tel:+919876543210" className="hover:text-emerald-400 transition-colors">
                   +91 9398633736
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-5 h-5 text-emerald-400" />
+                <a href="tel:+919876543210" className="hover:text-emerald-400 transition-colors">
+                  +91 9951012333
                 </a>
               </li>
               <li className="flex items-center gap-2">
